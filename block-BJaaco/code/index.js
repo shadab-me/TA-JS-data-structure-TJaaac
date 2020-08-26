@@ -24,16 +24,21 @@ let userIds = [1230, 234, 1278, 984, 763, 900];
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times() {
+function times(n, str ='test') {
   // Your code
+  let arr = []
+  for(let i= 0; i < n; i++){
+    arr.push(str);
+  }
+return arr
 }
 
 // Uncomment the code below and test the output
 
-// console.log(times(5, 'c')); // ['c', 'c', 'c', 'c', 'c']
-// console.log(times(2, 'a')); // ['a', 'a']
-// console.log(times(0)); // []
-// console.log(times(5)); // ['test', 'test', 'test', 'test', 'test']
+ console.log(times(5, 'c')); // ['c', 'c', 'c', 'c', 'c']
+ console.log(times(2, 'a')); // ['a', 'a']
+ console.log(times(0)); // []
+ console.log(times(5)); // ['test', 'test', 'test', 'test', 'test']
 
 /*
 
@@ -48,8 +53,12 @@ function times() {
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function revert() {
+function revert(arr) {
   // your code
+  let arrR = [];
+  for(let i = arr.length; i > 0; i--){
+     arrR.push(arr[i])
+  }
 }
 
 // Uncomment the code below and test the output
@@ -70,8 +79,15 @@ function revert() {
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function clear() {
+function clear(arr) {
   // your code
+  let ar = [];
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] != undefined && arr[i] != null){
+      ar.push(arr[i])
+    }
+  }
+  return ar;
 }
 
 // Uncomment the code below and test the output
@@ -93,8 +109,14 @@ function clear() {
     arrayToObj(['Ryan', 'John']); // {0: 'Ryan', 1: 'John'}
 */
 
-function arrayToObj() {
+
+function arrayToObj(arr) {
   // your code
+  let obj = {};
+  for(let i = 0; i < arr.length; i++){
+    obj[arr[i]] == i;
+  }
+  return obj;
 }
 
 // Uncomment the code below and test the output
