@@ -71,7 +71,10 @@ for(let item in got.houses[1].people){
   }
 }
 // 11. Push the name of the houses in an array named `houseNames` and Log the array
- 
+ let houseNames = [];
+ for(let house of got.houses){
+   houseNames.push(house.name)
+ }
 
 // 12. Log the size of people in Starks house
   console.log(got.houses[0].people.length)
